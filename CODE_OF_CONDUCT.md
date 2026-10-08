@@ -3,8 +3,8 @@
 Dit is een project waarin kinderen en volwassenen samen games maken. Zo houden we het leuk voor
 iedereen:
 
-- **Wees aardig.** Praat over de code, niet over de persoon. "Deze loop kan korter" in plaats
-  van "je hebt het fout gedaan".
+- **Wees aardig.** Praat over het werk, niet over de persoon. "De munt is zo klein dat je hem
+  bijna niet ziet. Kan hij groter?" in plaats van "je game is slecht".
 - **Iedereen is ooit begonnen.** Help anderen leren en lach niet om vragen.
 - **Zeg dankjewel** voor reviews en hulp.
 - **Geschikt voor iedereen.** Geen schelden, pesten, enge of volwassen dingen.
