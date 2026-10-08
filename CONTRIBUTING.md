@@ -5,8 +5,9 @@ leert, werkt dus overal.
 
 ## Zo werkt het
 
-1. **Begin met een issue.** Een bug gevonden of een idee? Maak eerst een [issue](../../issues)
-   en beschrijf wat je zag of wilt.
+1. **Heb je een idee? Maak het gewoon.** Een pull request met een goed idee is altijd welkom.
+   Wordt het iets groots, of weet je niet zeker of de eigenaar het wil? Vraag het dan eerst
+   in een [issue](../../issues). Een bug die je niet zelf kunt oplossen, zet je ook in een issue.
 2. **Maak een fork en een branch.** Een fork is je eigen kopie van het project, een branch is
    een zijspoor waarop je werkt zonder het origineel te veranderen.
    ```sh
