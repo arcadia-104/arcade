@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>De arcade van jouwnaam</title>
+  <style>
+    /* ===== Kleuren: verander ze in die van jouw thema! ===== */
+    :root {
+      --achtergrond: #111;
+      --tekst: #eee;
+      --accent: #4fc3f7;
+      --knop: #222;
+    }
+
+    @font-face {
+      font-family: "Press Start 2P";
+      src: url("fonts/PressStart2P-Regular.ttf");
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 48px 16px;
+      box-sizing: border-box;
+      background: var(--achtergrond);
+      color: var(--tekst);
+      font-family: "Press Start 2P", monospace;
+      text-align: center;
+    }
+    h1 { color: var(--accent); font-size: 24px; line-height: 1.6; }
+    p { font-size: 12px; line-height: 2; }
+    ul { list-style: none; padding: 0; max-width: 420px; margin: 40px auto; }
+    li { margin: 16px 0; }
+    a {
+      display: block;
+      padding: 20px;
+      background: var(--knop);
+      color: var(--tekst);
+      border: 3px solid var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    a:hover { background: var(--accent); color: var(--achtergrond); }
+  </style>
+</head>
+<body>
+  <h1>De arcade van jouwnaam</h1>
+  <p>Kies een game!</p>
+
+  <ul>
+    <!-- Elke game is één regel. Een nieuwe game? Kopieer een regel en
+         verander de mapnaam en de titel. -->
+    <li><a href="_start/">Munten pakken</a></li>
+  </ul>
+
+  <p>Gemaakt door jouwnaam · <a href="https://github.com/arcadia-104" style="display:inline;border:0;padding:0;background:none;color:var(--accent)">arcadia-104</a></p>
+</body>
+</html>

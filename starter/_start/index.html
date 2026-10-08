@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Mijn game</title>
+  <style>
+    body { margin: 0; height: 100vh; display: flex; align-items: center; justify-content: center; background: #111; }
+    canvas { background: #000; }
+  </style>
+</head>
+<body>
+<canvas id="scherm" width="480" height="480"></canvas>
+<script>
+// ===== Instellingen: verander deze getallen! =====
+const SNELHEID = 4;             // hoeveel pixels je speler per stap beweegt
+const GROOTTE = 20;             // grootte van speler en munt, in pixels
+const KLEUR_SPELER = "#4fc3f7"; // kleuren schrijf je als #rrggbb
+const KLEUR_MUNT = "#ffd54f";
+
+// ===== Klaarzetten =====
+const scherm = document.getElementById("scherm");
+const pen = scherm.getContext("2d");  // de pen waarmee we tekenen
+
+// Let op: (0, 0) is linksboven. Hoe groter y, hoe lager op het scherm.
+let speler = { x: 230, y: 230 };
+let munt = nieuweMunt();
+let score = 0;
+
+// Onthoud welke toetsen ingedrukt zijn
+const toetsen = {};
+document.addEventListener("keydown", e => toetsen[e.key] = true);
+document.addEventListener("keyup", e => toetsen[e.key] = false);
+
+function nieuweMunt() {
+  return {
+    x: Math.random() * (scherm.width - GROOTTE),
+    y: Math.random() * (scherm.height - GROOTTE),
+  };
+}
+
+// 1. Bijwerken: wat is er veranderd?
+function bijwerken() {
+  if (toetsen["ArrowLeft"])  speler.x -= SNELHEID;
+  if (toetsen["ArrowRight"]) speler.x += SNELHEID;
+  if (toetsen["ArrowUp"])    speler.y -= SNELHEID;
+  if (toetsen["ArrowDown"])  speler.y += SNELHEID;
+
+  // Raakt de speler de munt?
+  if (Math.abs(speler.x - munt.x) < GROOTTE && Math.abs(speler.y - munt.y) < GROOTTE) {
+    score = score + 1;
+    munt = nieuweMunt();
+  }
+}
+
+// 2. Tekenen: zet alles op het scherm
+function tekenen() {
+  pen.clearRect(0, 0, scherm.width, scherm.height);  // eerst alles wissen
+
+  pen.fillStyle = KLEUR_MUNT;
+  pen.fillRect(munt.x, munt.y, GROOTTE, GROOTTE);
+
+  pen.fillStyle = KLEUR_SPELER;
+  pen.fillRect(speler.x, speler.y, GROOTTE, GROOTTE);
+
+  pen.fillStyle = "white";
+  pen.font = "20px monospace";
+  pen.fillText("Score: " + score, 10, 30);
+}
+
+// 3. De game loop: zo'n 60 keer per seconde bijwerken en tekenen
+function loop() {
+  bijwerken();
+  tekenen();
+  requestAnimationFrame(loop);
+}
+loop();
+</script>
+</body>
+</html>

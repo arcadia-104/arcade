@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arcade · arcadia-104</title>
+  <style>
+    :root {
+      --achtergrond: #111;
+      --tekst: #eee;
+      --accent: #ffd54f;
+      --knop: #222;
+    }
+
+    @font-face {
+      font-family: "Press Start 2P";
+      src: url("starter/fonts/PressStart2P-Regular.ttf");
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 48px 16px;
+      box-sizing: border-box;
+      background: var(--achtergrond);
+      color: var(--tekst);
+      font-family: "Press Start 2P", monospace;
+      text-align: center;
+    }
+    h1 { color: var(--accent); font-size: 28px; line-height: 1.6; }
+    p { font-size: 12px; line-height: 2; }
+    ul { list-style: none; padding: 0; max-width: 480px; margin: 40px auto; }
+    li { margin: 16px 0; }
+    li a {
+      display: block;
+      padding: 20px;
+      background: var(--knop);
+      color: var(--tekst);
+      border: 3px solid var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    li a:hover { background: var(--accent); color: var(--achtergrond); }
+    p a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <h1>ARCADE</h1>
+  <p>Games die we zelf maken. Kies een arcade!</p>
+
+  <ul>
+    <!-- Elke arcade is één regel. Zet die van jou erbij met een pull request,
+         zie CONTRIBUTING.md. -->
+  </ul>
+
+  <p>Zelf meedoen? Kijk op <a href="https://github.com/arcadia-104/arcade">GitHub</a>.</p>
+</body>
+</html>
